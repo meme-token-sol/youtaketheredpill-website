@@ -1,1 +1,55 @@
 
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "VT323", monospace;
+}
+
+.hero-image {
+  background-image: url("../assets/background.webp");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #008f11;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 24px;
+  background-color: #0d0208;
+  padding: 20px;
+  border-radius: 0%;
+}
+
+.btn {
+  border: none;
+  color: #008f11;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #0d0208;
+  font-family: "VT323", monospace;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: #0d0208;
+  color: red;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px red;
+}
