@@ -1,77 +1,89 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: "VT323", monospace;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "VT323", monospace;
 }
 
 .hero-image {
-    background-image: url("../assets/background.webp");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  background-image: url("../assets/background.webp");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .hero-text {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #008f11;
-    text-transform: uppercase;
-    padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #008f11;
+  text-transform: uppercase;
+  padding: 20px;
 }
 
 p {
-    font-size: 20px;
-    background-color: #0d0208;
-    padding: 10px;
-    border-radius: 5px;
+  font-size: 20px;
+  background-color: #0d0208;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .btn {
-    border: none;
-    color: #008f11;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #0d0208;
-    font-family: "VT323", monospace;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  border: none;
+  color: #008f11;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #0d0208;
+  font-family: "VT323", monospace;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
-    background-color: #0d0208;
-    color: red;
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px red;
+  background-color: #0d0208;
+  color: red;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px red;
 }
 
 @media (max-width: 768px) {
-    .hero-text p {
-        font-size: 18px;
-        padding: 15px;
-    }
+  .hero-text p {
+    font-size: 18px;
+    padding: 15px;
+  }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-    .hero-text p {
-        font-size: 16px;
-        padding: 10px;
-    }
+  .hero-image {
+    background-image: url("../assets/mobile.webp"); /* Küçük ekranlar için farklı bir görsel */
+  }
 
-    .btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+  .hero-text {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }
