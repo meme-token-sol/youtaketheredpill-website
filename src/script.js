@@ -4,7 +4,6 @@ const ctx = canvas.getContext("2d");
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  initDrops();
 }
 
 window.addEventListener("resize", resizeCanvas);
@@ -12,15 +11,11 @@ resizeCanvas();
 
 const matrixLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const fontSize = 16;
-let columns;
-let drops = [];
+const columns = canvas.width / fontSize;
 
-function initDrops() {
-  columns = canvas.width / fontSize;
-  drops = [];
-  for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
-  }
+const drops = [];
+for (let x = 0; x < columns; x++) {
+  drops[x] = 1;
 }
 
 function drawMatrix() {
@@ -31,7 +26,8 @@ function drawMatrix() {
   ctx.font = fontSize + "px monospace";
 
   for (let i = 0; i < drops.length; i++) {
-    const text = matrixLetters[Math.floor(Math.random() * matrixLetters.length)];
+    const text =
+      matrixLetters[Math.floor(Math.random() * matrixLetters.length)];
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
     if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -47,7 +43,8 @@ setTimeout(() => {
 
   const message = document.getElementById("message");
   message.textContent = "";
-  const messageText = "Send your Solana from your DEX wallet to this address and get rich: keyWcrpVokmeZjaW1oDYZxvnp9eV8dqybo5vB2Wpxkd";
+  const messageText =
+    "Send your Solana from your DEX wallet to this address and get rich: keyWcrpVokmeZjaW1oDYZxvnp9eV8dqybo5vB2Wpxkd";
   let messageIndex = 0;
 
   function typeMessage() {
@@ -63,7 +60,8 @@ setTimeout(() => {
 
 document.getElementById("message").addEventListener("click", () => {
   const address = "keyWcrpVokmeZjaW1oDYZxvnp9eV8dqybo5vB2Wpxkd";
-  navigator.clipboard.writeText(address)
+  navigator.clipboard
+    .writeText(address)
     .then(() => {
       alert("Copied Wallet Address to Clipboard");
     })
