@@ -3,11 +3,18 @@ html {
   height: 100%;
   margin: 0;
   font-family: "VT323", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../assets/background.webp");
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,14 +22,11 @@ html {
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: #008f11;
   text-transform: uppercase;
   padding: 20px;
+  border-radius: 10px;
 }
 
 p {
@@ -34,7 +38,7 @@ p {
 
 .btn {
   border: none;
-  color: #008f11;
+  color: red;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -55,6 +59,10 @@ p {
 }
 
 @media (max-width: 768px) {
+  .hero-image {
+    flex-direction: column;
+  }
+
   .hero-text p {
     font-size: 18px;
     padding: 15px;
@@ -68,11 +76,12 @@ p {
 
 @media (max-width: 480px) {
   .hero-image {
-    background-image: url("../assets/mobile.webp"); /* Küçük ekranlar için farklı bir görsel */
+    background-image: url("../assets/mobile.webp");
+    flex-direction: column;
   }
 
   .hero-text {
-    width: 100%;
+    width: 90%;
     padding: 20px;
     box-sizing: border-box;
   }
