@@ -44,19 +44,19 @@ setTimeout(() => {
   const message = document.getElementById("message");
   message.textContent = "";
   const messageText =
-    "Send your Solana from your DEX wallet to this address and get rich: keyWcrpVokmeZjaW1oDYZxvnp9eV8dqybo5vB2Wpxkd";
+    "Send your Solana from your DEX wallet to this address and get rich. Click address to copy: keyWcrpVokmeZjaW1oDYZxvnp9eV8dqybo5vB2Wpxkd";
   let messageIndex = 0;
 
   function typeMessage() {
     if (messageIndex < messageText.length) {
       message.textContent += messageText.charAt(messageIndex);
       messageIndex++;
-      setTimeout(typeMessage, 50);
+      setTimeout(typeMessage, 40);
     }
   }
 
   typeMessage();
-}, 1500);
+}, 1000);
 
 document.getElementById("message").addEventListener("click", () => {
   const address = "keyWcrpVokmeZjaW1oDYZxvnp9eV8dqybo5vB2Wpxkd";
